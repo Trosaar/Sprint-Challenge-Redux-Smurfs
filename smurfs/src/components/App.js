@@ -10,7 +10,7 @@ import Village from './village'
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className='App'>
         <Village />
       </div>
     );

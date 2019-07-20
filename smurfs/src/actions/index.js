@@ -23,7 +23,7 @@ export const CALL_FAIL = 'CALL_FAIL';
 export function smurfMeeting() {
   return (dispatch) => {
     dispatch({type: CALL_SMURFS})
-    axios.get('localhost:3333/smurfs')
+    axios.get('http://localhost:3333/smurfs')
       .then((res) => {
         dispatch({type: CALL_SUCCESS, payload: res.data})
       })

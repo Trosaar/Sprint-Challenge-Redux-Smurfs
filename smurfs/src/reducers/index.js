@@ -21,7 +21,7 @@ export default (state = initialState, action) => {
       }
     }
     case CALL_SUCCESS: {
-      const smurfsAtHome = action.payload.result;
+      const smurfsAtHome = action.payload;
       return {
         ...state,
         smurfs: smurfsAtHome,
