@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Village from './village'
+import AddSmurfForm from './addSmurfForm'
 /*
  to wire this component up you're going to need a few things.
  I'll let you do this part on your own.
@@ -12,6 +13,7 @@ class App extends Component {
     return (
       <div className='App'>
         <Village />
+        <AddSmurfForm />
       </div>
     );
   }

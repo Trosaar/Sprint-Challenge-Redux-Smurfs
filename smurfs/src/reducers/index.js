@@ -1,7 +1,7 @@
 /*
   Be sure to import in all of the action types from `../actions`
 */
-import { CALL_SMURFS, CALL_SUCCESS, CALL_FAIL } from '../actions'
+import { CALL_SMURFS, CALL_SUCCESS, CALL_FAIL, MOVING_IN, MOVE_SUCCESS, MOVE_FAIL } from '../actions'
 
 const initialState = {
    smurfs: [],
@@ -33,6 +33,28 @@ export default (state = initialState, action) => {
       return {
         ...state,
         fetchingSmurfs: false,
+        error: true,
+      }
+    }
+    case MOVING_IN: {
+      return {
+        ...state,
+        addingSmurf: true,
+      }
+    }
+    case MOVE_SUCCESS: {
+      const paperworkSigned = action.payload;
+      return {
+        ...state,
+        smurfs: paperworkSigned,
+        addingSmurf: false,
+        error: false,
+      }
+    }
+    case MOVE_FAIL: {
+      return {
+        ...state,
+        addingSmurf: false,
         error: true,
       }
     }

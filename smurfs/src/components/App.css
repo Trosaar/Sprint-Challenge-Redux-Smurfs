@@ -1,7 +1,7 @@
 .App {
   background-color: #222;
   padding: 20px;
-  height: stretch;
+  height: fit;
   color: white;
   text-align: center;
 }
